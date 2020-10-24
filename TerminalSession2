@@ -1,0 +1,44 @@
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders
+$ git init
+Initialized empty Git repository in C:/Users/Ricker/projects/murders/.git/
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders (master)
+$ git add README.txt
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders (master)
+$ git commit -m "First commit. Adding README.txt file just to get started."
+[master (root-commit) 2031f3f] First commit. Adding README.txt file just to get started.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.txt
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders (master)
+$ git remote add origin https://github.com/ricknye/murders-class.git
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders (master)
+$ git push --set-upstream origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 278 bytes | 278.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/ricknye/murders-class/pull/new/master
+remote:
+To https://github.com/ricknye/murders-class.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders (master)
+$ git push
+Everything up-to-date
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders (master)

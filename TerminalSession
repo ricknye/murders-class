@@ -1,0 +1,176 @@
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders
+$ mkdir git-example
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders
+$ cd git-example
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example
+$ git clone https://github.com/rairizarry/murders.git
+Cloning into 'murders'...
+remote: Enumerating objects: 19, done.
+remote: Total 19 (delta 0), reused 0 (delta 0), pack-reused 19
+Unpacking objects: 100% (19/19), 11.94 KiB | 150.00 KiB/s, done.
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example
+$ cd murders
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ ls
+README.txt  data             murders.Rproj  report.Rmd  report_files
+analysis.R  download-data.R  rdas           report.md   wrangle-data.R
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ cd ..
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example
+$ ls
+murders
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example
+$ cd murders
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ echo "test" >> new-file.txt
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ echo "temporary >> tmp.txt
+> echo "temporary" >> tmp.txt
+> echo "temporary >> tmp.txt
+echo "temporary" >> tmp.txt
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ echo "temporary" >> tmp.txt
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ git add new-file.txt
+warning: LF will be replaced by CRLF in new-file.txt.
+The file will have its original line endings in your working directory
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   new-file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        tmp.txt
+
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ git commit -m "adding a new file"
+[master 5b7de34] adding a new file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new-file.txt
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ echo "adding a line" >> new-file.txt
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ git add new-file.txt
+warning: LF will be replaced by CRLF in new-file.txt.
+The file will have its original line endings in your working directory
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ git commit -m "adding a new line to new-file"
+[master 7a2bfae] adding a new line to new-file
+ 1 file changed, 1 insertion(+)
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        tmp.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ echo "adding a second line" >> new-file.txt
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ git commit -m "minor change to new-file" new-file.txt
+warning: LF will be replaced by CRLF in new-file.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in new-file.txt.
+The file will have its original line endings in your working directory
+[master a8e6b8f] minor change to new-file
+ 1 file changed, 1 insertion(+)
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        tmp.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ git log new-file.txt
+commit a8e6b8f2f079efabd82b060bf47468ca448b7d38 (HEAD -> master)
+Author: ricknye <ricker2345@yahoo.com>
+Date:   Sat Oct 24 11:34:43 2020 -0700
+
+    minor change to new-file
+
+commit 7a2bfae9b6210c1ef317052c48eecbe75efd2092
+Author: ricknye <ricker2345@yahoo.com>
+Date:   Sat Oct 24 11:30:52 2020 -0700
+
+    adding a new line to new-file
+
+commit 5b7de3432336f326c68fc3df5885f92ac886ad9e
+Author: ricknye <ricker2345@yahoo.com>
+Date:   Sat Oct 24 11:29:12 2020 -0700
+
+    adding a new file
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ git push
+remote: Permission to rairizarry/murders.git denied to ricknye.
+fatal: unable to access 'https://github.com/rairizarry/murders.git/': The requested URL returne
+d error: 403
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ git fetch
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ git merge
+Already up to date.
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ git pull
+Already up to date.
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$ ^C
+
+Ricker@DESKTOP-K6BHSIQ  ~/projects/murders/git-example/murders (master)
+$
